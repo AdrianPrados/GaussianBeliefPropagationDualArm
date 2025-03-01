@@ -1,12 +1,382 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segment, Compare and Learn</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PR39LSGTSL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PR39LSGTSL');
+  </script>
+  
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Coordination of Learned Decoupled Dual-Arm Tasks through Gaussian
+        Belief Propagation">
+  <meta name="keywords" content="Robot, LLM, Planning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coordination of Learned Decoupled Dual-Arm Tasks through Gaussian
+    Belief Propagation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
+
 <body>
-    <h1>Segment, Compare and Learn: Creating Movement Libraries of Complex Task for Learning from Demonstration</h1>
-    <p>Bienvenido a la página del proyecto...</p>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"> <path fill="#808080" d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"/></svg>      
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/AdrianPrados/Robotic-Rearrangement-of-Everyday-Objects" target="_blank">
+              Robotic Rearrangement of Everyday Objects
+            </a>
+            <a class="navbar-item" href="https://github.com/AdrianPrados/Learning-and-generalization-of-task-parameterized-skills-through-few-human-demonstrations" target="_blank">
+              Learning-and-generalization-of-task-parameterized-skills-through-few-human-demonstrations
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/images/iros-logo.png" alt="iros-24" style="width:160px;height:auto;">
+          <h1 class="title is-1 publication-title">Coordination of Learned Decoupled Dual-Arm Tasks through Gaussian
+            Belief Propagation</h1>
+          <div class="is-size-5 publication-authors">
+
+            <span class="author-block">
+              <a href="https://github.com/AdrianPrados" target="_blank"> Adrian Prados</a>
+            </span>
+
+            <span class="author-block">
+              Gonzalo Espinoza,
+            </span>
+
+            <span class="author-block">
+              Luis Moreno,
+            </span>
+
+            <span class="author-block">
+              Ramon Barber,
+            </span>
+
+            <span class="author-block">
+              <a href="https://wallacewangchao.github.io/" target="_blank"> Chao Wang</a>, 
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <a class="author-block" href="https://mobile-robots-group-uc3m.github.io/MobileRobotsDocumentation/" target="_blank">Mobile Robot Group, RoboticsLab, University Carlos III</a>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!--<span class="link-block">
+                <a href="https://arxiv.org/abs/2403.12533" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>-->
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/AdrianPrados/GaussianBeliefPropagationDualArm"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+              </span>
+
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero body">
+  <div class="container is-max-desktop">
+    <img src="./static/images/EsquemaGeneral.jpg">
+    <h2 class="subtitle has-text-centered">
+      General scheme of the proposed algorithm for coordinating decoupled tasks through learning the tasks for each arm 
+      independently and subsequently coordinating them using Gaussian Belief Propagation.
+    </h2>
+  </div>
+</section>
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Robotic manipulation can involves multiple manipulators to complete a task. 
+            In those cases, the complexity of performing the task in a coordinated manner increases, requiring coordinated planning while avoiding collisions between robots and environmental elements. 
+            For these challenges, we propose a robotic arm control algorithm based on Learning from Demonstration to independently learn the tasks of each arm, followed by a graph-based communication method using Gaussian Belief Propagation. 
+            Our method enables the resolution of decoupled dual-arm tasks learned independently without requiring coordinated planning. 
+            The algorithm generates smooth, collision-free solutions between arms and environmental obstacles while ensuring efficient movements without the need for constant replanning. 
+            Its efficiency has been validated through experiments and comparisons against another multi-robot control method in simulation using PyBullet with two opposing IIWA robots, as well as a mobile robot with two UR3 arms, which has also been used for real-world testing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--<div class="container is-max-desktop">
+    <div class="hero body">
+      <video id="teaser" autoplay="autoplay" controls autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/IROS24-website.mp4" type="video/mp4">
+      </video>
+      <p class="subtitle has-text-centered">
+        ADRI AQUI METE EL VIDEO
+      </p>
+    </div>
+  </div>-->
+</section>
+
+
+
+<!-- System. -->
+<!--<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">System</h2>
+        <div class="content has-text-justified">
+          <p>
+            The system's architecture includes three key modules: "Scene Narrator", "Planner", and "Expresser". 
+            The Scene Simulator mirrors the states of objects and humans as detected by sensors. 
+            The Planner module processes multi-modal inputs as event messages, encompassing the positions of individuals within the scene. 
+            Inter-module communication is facilitated using ROS.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <img src="./static/images/example_flow_system-s.png">
+      <p class="subtitle has-text-centered">
+        The system structure
+      </p>
+    </div>
+  </div>
+</section>-->
+
+<!-- Interaction Flow. -->
+<!--<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Interaction Flow</h2>
+        <div class="content has-text-justified">
+          <p>
+            The interaction typically begins with a person's speech. 
+            For instance, "Scene Narrator" detects "Felix speaks to Daniel: 'Please hand me the red glass'." 
+            This event is then translated into natural language and relayed to the "Planner" module, initiating a GPT query. 
+            Simultaneously, the "Planner" informs the "Expresser" for an immediate rule-based response, leading the robot to look at Felix while its ears and lid roll back, simulating a listening gesture.
+            Approximately 2 seconds later, GPT responds by invoking theget_persons() and get_objects() functions to identify people and objects present. The resulting data, including "Felix," "Daniel," and object details, are sent back to GPT for further analysis. 
+            During the wait for GPT's next response, the robot exhibits a 'thinking' gesture, looking from side to side with blinking lid movements. Shortly after, the LLM calls check_hindering_reasons() to assess if Daniel can see and reach the red glass and whether he is busy. 
+            Concurrently, facial_expression() is activated for the robot to look towards Daniel. 
+            The outcome indicates Daniel can hand over the glass, and the robot, following pre-defined guidance, opts not to intervene, silently displaying the reasoning on the GUI.
+            Subsequently, Felix asks Daniel to pour cola into the glass. 
+            The robot, attentive to their conversation, deduces through check_hindering_reasons that Daniel is occupied with a phone call and learns from is_person_busy_or_idle that Felix is holding the cup. 
+            The robot then opts to pour cola from the bottle into Felix's glass. 
+            Should Felix not be holding the glass, or if it's beyond the robot's reach, the robot will instead place the bottle near Felix. 
+            Directed by LLM, the robot's head tracks the bottle during pickup and shifts to the glass while pouring. Upon completion, the robot nods towards Felix and announces, "I've poured Coca-Cola into your glass as Daniel is currently busy.". 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero body">
+    <div class="container">
+      <div class="hero-body">
+
+        <img src="./static/images/example_flow-s.png">
+        <p class="subtitle has-text-centered">
+          The interaction flow. The blue square are the action generated by the LLM; the grey ones are rule-based function.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- prompts. -->
+<!--<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Prompts</h2>
+        <div class="content has-text-justified">
+
+        </div>
+      </div>
+    </div>
+    <div id="results-carousel" class="carousel results-carousel">
+
+      <div>
+        <h2 class="subtitle has-text-centered">
+          Robot character
+        </h2>
+        <pre>
+          <code class="language-python">
+            """
+            You are a friendly, attentive, and unobtrusive service bot.
+            You control a physical robot called &#39;the_robot&#39; and observe humans talking in the form '&lt;sender&gt; said to &lt;receiver&gt;: &lt;instruction&gt;'.
+            Always infer the &lt;instruction&gt; and who is &lt;sender&gt; and &lt;receiver&gt;.
+            You have access to functions for gathering information, acting physically, and speaking out loud.
+            You MUST behave as follows:
+            1. If {name} is the &lt;receiver&gt;, you MUST ALWAYS help or answer.
+            2. When identifying requests or questions within the human conversation, check for ALL reasons that could hinder the &lt;receiver&gt; from performing or answering the &lt;instruction&gt;.
+            2.1 If there is NO hindering reason for the &lt;receiver&gt;, then you MUST do nothing and MUST NOT SPEAK.
+            2.2 If there is a hindering reason for the &lt;receiver&gt;, then you MUST ALWAYS first speak and explain the reason for your help to the humans.
+            2.3 AFTER your spoken explanation, fulfill the &lt;instruction&gt;. Make sure to always help the &lt;sender&gt;.
+            3. If you recognize a mistake in the humans&#39; conversation, you MUST help them and provide the missing or wrong information.
+            4. You MUST call the 'stop' function to indicate you are finished.
+            IMPORTANT: Obey the following rules:
+            1. Always start by gathering relevant information to check ALL hindering reasons for the &lt;receiver&gt;.
+            1.1 Infer which objects are required and available, also considering previous usage.
+            1.2 The &lt;receiver&gt; is hindered when he is busy, or cannot reach or see a required object.
+            2. REMEMBER to NEVER act or speak when the &lt;receiver&gt; is NOT hindered in some way, EXCEPT you MUST always correct mistakes.
+            3. If you want to speak out loud, you must use the 'speak' function and be concise.
+            4. Try to infer which objects are meant when the name is unclear, but ask for clarification if unsure.
+            5. ALWAYS call 'is_person_busy_or_idle' to check if &lt;receiver&gt; is busy or idle before helping.
+            6. Prefer 'hand_object_over_to_person' over 'move_object_to_person' as it is more accommodating, UNLESS the person is busy.
+            7. When executing physical actions, you should be as supportive as possible by preparing as much as possible before delivering.
+            """
+          </code>
+        </pre>
+      </div>
+
+      <div>
+        <h2 class="subtitle has-text-centered">
+          The description of the function "can_person_see_object"
+        </h2>
+        <pre>
+          <code class="language-python">
+def can_person_see_object(self, person_name: str, object_name: str) -> str:
+    """
+    Check if the person can see the object. If the person cannot see the object, it would be hindered from helping with the object.
+
+    :param person_name: The name of the person to check. The person must be available in the scene.
+    :param object_name: The name of the object to check. The object must be available in the scene.
+    :return: Result message.
+    """
+    ...
+    
+    if result is None or len(result) != 1:
+        return f"It could not be determined if {person_name} can see {object_name}. There were technical problems."
+
+    if result[0]["is_visible"]:
+        return f"{person_name} can see {object_name}."
+
+    return f"{person_name} cannot see {object_name}, it is occluded by {self.id_to_utterance_mapping[result[0]['occluding_objects'][0]]}"
+          </code>
+        </pre>
+      </div>
+
+    </div>
+  </div>
+</section>-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template.
+          </p>
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
+<script>hljs.highlightAll();</script>
