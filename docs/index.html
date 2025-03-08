@@ -277,6 +277,14 @@
           </p>
         </div>
       </div>
+      <div class="column">
+        <img src="./static/images/ResultIIWA.jpg">
+        <p class="subtitle has-text-centered">
+          Results of the different experiments conducted with the IIWA robots in simulation in terms of movement smoothness, 
+          analyzing velocity and position.
+        </p>
+      </div>
+      <div class="content has-text-justified">
     </div>
   </div>
 
@@ -334,83 +342,58 @@
 </section>
 
 
-<!-- prompts. -->
-<!--<section class="section">
+<!-- Examples with ADAM. -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Prompts</h2>
+        <h2 class="title is-3">Examples in Real Environments with ADAM</h2>
         <div class="content has-text-justified">
-
+          <p>
+            The algorithm has also been used for tasks in real environments using the ADAM robot, 
+            belonging to the Mobile Robotics group at RoboticsLab, at the Carlos III University of Madrid. 
+            In these tests, two real task experiments were conducted where coordination between the two robotic arms is crucial: 
+            a cube stacking task and a shelf organization task. In this case, each arm uses a trajectory learned 
+            through Learning from Demonstration completely independently, without considering the other arm at any moment. 
+            The developed algorithm will handle the necessary coordination. The following two videos demonstrate the efficiency of 
+            our algorithm on the real platform, performing complex tasks smoothly and always achieving a satisfactory result.
+          </p>
         </div>
       </div>
     </div>
-    <div id="results-carousel" class="carousel results-carousel">
+  </div>
 
-      <div>
-        <h2 class="subtitle has-text-centered">
-          Robot character
-        </h2>
-        <pre>
-          <code class="language-python">
-            """
-            You are a friendly, attentive, and unobtrusive service bot.
-            You control a physical robot called &#39;the_robot&#39; and observe humans talking in the form '&lt;sender&gt; said to &lt;receiver&gt;: &lt;instruction&gt;'.
-            Always infer the &lt;instruction&gt; and who is &lt;sender&gt; and &lt;receiver&gt;.
-            You have access to functions for gathering information, acting physically, and speaking out loud.
-            You MUST behave as follows:
-            1. If {name} is the &lt;receiver&gt;, you MUST ALWAYS help or answer.
-            2. When identifying requests or questions within the human conversation, check for ALL reasons that could hinder the &lt;receiver&gt; from performing or answering the &lt;instruction&gt;.
-            2.1 If there is NO hindering reason for the &lt;receiver&gt;, then you MUST do nothing and MUST NOT SPEAK.
-            2.2 If there is a hindering reason for the &lt;receiver&gt;, then you MUST ALWAYS first speak and explain the reason for your help to the humans.
-            2.3 AFTER your spoken explanation, fulfill the &lt;instruction&gt;. Make sure to always help the &lt;sender&gt;.
-            3. If you recognize a mistake in the humans&#39; conversation, you MUST help them and provide the missing or wrong information.
-            4. You MUST call the 'stop' function to indicate you are finished.
-            IMPORTANT: Obey the following rules:
-            1. Always start by gathering relevant information to check ALL hindering reasons for the &lt;receiver&gt;.
-            1.1 Infer which objects are required and available, also considering previous usage.
-            1.2 The &lt;receiver&gt; is hindered when he is busy, or cannot reach or see a required object.
-            2. REMEMBER to NEVER act or speak when the &lt;receiver&gt; is NOT hindered in some way, EXCEPT you MUST always correct mistakes.
-            3. If you want to speak out loud, you must use the 'speak' function and be concise.
-            4. Try to infer which objects are meant when the name is unclear, but ask for clarification if unsure.
-            5. ALWAYS call 'is_person_busy_or_idle' to check if &lt;receiver&gt; is busy or idle before helping.
-            6. Prefer 'hand_object_over_to_person' over 'move_object_to_person' as it is more accommodating, UNLESS the person is busy.
-            7. When executing physical actions, you should be as supportive as possible by preparing as much as possible before delivering.
-            """
-          </code>
-        </pre>
+  <!-- Video Section -->
+  <div class="container">
+    <div class="columns is-centered">
+      
+      <!-- Video 1 -->
+      <div class="column is-half">
+        <figure class="image is-16by9">
+          <video controls>
+            <source src="./static/videos/CubosRealADAM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+        <p class="has-text-centered">Cube stacking task.</p>
       </div>
 
-      <div>
-        <h2 class="subtitle has-text-centered">
-          The description of the function "can_person_see_object"
-        </h2>
-        <pre>
-          <code class="language-python">
-def can_person_see_object(self, person_name: str, object_name: str) -> str:
-    """
-    Check if the person can see the object. If the person cannot see the object, it would be hindered from helping with the object.
-
-    :param person_name: The name of the person to check. The person must be available in the scene.
-    :param object_name: The name of the object to check. The object must be available in the scene.
-    :return: Result message.
-    """
-    ...
-    
-    if result is None or len(result) != 1:
-        return f"It could not be determined if {person_name} can see {object_name}. There were technical problems."
-
-    if result[0]["is_visible"]:
-        return f"{person_name} can see {object_name}."
-
-    return f"{person_name} cannot see {object_name}, it is occluded by {self.id_to_utterance_mapping[result[0]['occluding_objects'][0]]}"
-          </code>
-        </pre>
+      <!-- Video 2 -->
+      <div class="column is-half">
+        <figure class="image is-16by9">
+          <video controls>
+            <source src="./static/videos/ColocarLatasRealADAM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+        <p class="has-text-centered">Shelf organization task.</p>
       </div>
 
     </div>
   </div>
-</section>-->
+
+</section>
+
 
 <footer class="footer">
   <div class="container">
