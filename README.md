@@ -53,7 +53,7 @@ To test the efficiency of the algorithm, experiments have been carried out with 
   <img src="docs/static/images/IntroPaper.jpg" height=300 />
 </p>
 
-The video with the solution is provided on [Youtube](https://www.youtube.com/watch?v=kBT9ptGG024). We have also created a webpage where you can see in detail the results of the experiments. You can access clicking on [WebPage](https://adrianprados.github.io/GaussianBeliefPropagationDualArm/).
+The video with the solution is provided on [Youtube](https://youtu.be/4wB8RAer-kw). We have also created a webpage where you can see in detail the results of the experiments. You can access clicking on [WebPage](https://adrianprados.github.io/GaussianBeliefPropagationDualArm/).
 
 # Citation
 If you use this code, please quote our works :blush:
